@@ -14,7 +14,7 @@ public class MyButton extends JButton {
         this.s1=s1;
         this.s2=s2;
         setSize(50,50);
-        addActionListener(new Handler());
+
 
 
     }
@@ -30,13 +30,5 @@ public class MyButton extends JButton {
             this.toggled=true;
         }
     }
-    private class Handler implements ActionListener {
-        public void actionPerformed(ActionEvent event){
-            System.out.println("hej");
 
-            toggleState();
-
-        }
-
-    }
 }

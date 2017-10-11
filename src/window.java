@@ -19,7 +19,6 @@ public class window extends JFrame {
         MyButton mybutton = new MyButton(Color.white, Color.cyan, "On", "Off");
         MyButton mybutton2 = new MyButton(Color.white, Color.cyan, "On", "Off");
         add(mybutton);
-        add(mybutton2);
         setSize(400,400);
 
 
