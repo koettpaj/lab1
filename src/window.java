@@ -8,7 +8,7 @@ public class window extends JFrame {
     private JLabel nameTag;
     public window(){
         super("Carl och Edward");
-        Handler handler = new Handler();
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container container = getContentPane();
         container.setBackground(Color.blue);
@@ -17,8 +17,9 @@ public class window extends JFrame {
 
         add(nameTag);
         MyButton mybutton = new MyButton(Color.white, Color.cyan, "On", "Off");
-        mybutton.addActionListener(handler);
+        MyButton mybutton2 = new MyButton(Color.white, Color.cyan, "On", "Off");
         add(mybutton);
+        add(mybutton2);
         setSize(400,400);
 
 
@@ -26,13 +27,5 @@ public class window extends JFrame {
 
     }
 
-    private class Handler implements ActionListener {
-        public void actionPerformed(ActionEvent event){
-            System.out.println("hej");
-            MyButton buttonpressed = (MyButton)event.getSource();
-            buttonpressed.toggleState();
 
-        }
-
-    }
 }

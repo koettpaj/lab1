@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MyButton extends JButton {
     private Color c1,c2;
@@ -12,6 +14,7 @@ public class MyButton extends JButton {
         this.s1=s1;
         this.s2=s2;
         setSize(50,50);
+        addActionListener(new Handler());
 
 
     }
@@ -26,5 +29,14 @@ public class MyButton extends JButton {
             setText(s2);
             this.toggled=true;
         }
+    }
+    private class Handler implements ActionListener {
+        public void actionPerformed(ActionEvent event){
+            System.out.println("hej");
+
+            toggleState();
+
+        }
+
     }
 }
